@@ -1,0 +1,10 @@
+{
+  "name": "nyrp-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check app.js && node --check gallery.js && node --check callsign.js && node --check callsign-core.js",
+    "build": "npm run check && node build.mjs"
+  }
+}

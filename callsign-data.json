@@ -1,0 +1,1321 @@
+{
+  "departments": [
+    {
+      "id": "NYPD",
+      "name": "NYPD - New York City Police Department",
+      "agencyTag": "NYPD",
+      "divisions": [
+        {
+          "id": "nypd_highway",
+          "name": "NYPD Highway Patrol",
+          "template": "{callsign}",
+          "variables": {
+            "callsign": [
+              "HWY 101 - Cross Bronx Expressway",
+              "HWY 103 - Alexander Hamilton Bridge",
+              "HWY 111 - FDR Drive",
+              "HWY 114 - Harlem River Drive",
+              "HWY 115 - Henry Hudson Parkway",
+              "HWY 201 - Belt Parkway [Brooklyn]",
+              "HWY 204 - Belt Parkway [Brooklyn]",
+              "HWY 206 - Brooklyn Queens Expressway",
+              "HWY 208 - Brooklyn/Manhattan Bridge",
+              "HWY 301 - Grand Central Pkwy & RFK",
+              "HWY 307 - Belt Parkway [Queens]",
+              "HWY 308 - Van Wyck Expressway",
+              "HWY 310 - Long Island Expressway",
+              "HWY 501 - Staten Island Expressway",
+              "HWY 505 - West Shore Expressway",
+              "HWY 508 - Korean War Veterans Pkwy",
+              "5998",
+              "5663",
+              "5664",
+              "5999",
+              "5977",
+              "5979",
+              "5997",
+              "5665",
+              "5978",
+              "HWY 1 Follow Up",
+              "HWY 2 Follow Up",
+              "HWY 3 Follow Up",
+              "HWY 5 Follow Up",
+              "CTG 4615",
+              "CTG 4954",
+              "CTG 5954",
+              "CTG 3928",
+              "CTG 3929",
+              "HWY 1 Radar Car 2001",
+              "HWY 1 Radar Car 2053",
+              "HWY 1 Radar Car 2009",
+              "HWY 1 Radar Car 2015",
+              "HWY 1 Radar Car 5938",
+              "HWY 1 Radar Car 1724",
+              "HWY 2 Radar Car 2004",
+              "7952",
+              "HWY 2 Radar Car 2016",
+              "HWY 2 Radar Car 2012",
+              "HWY 2 Radar Car 2081",
+              "HWY 3 Radar Car 2058",
+              "HWY 3 Radar Car 2052",
+              "7950",
+              "HWY 3 Radar Car 2014",
+              "HWY 3 Radar Car 2010",
+              "HWY 3 Radar Car 5936",
+              "HWY 3 Radar Car 2066",
+              "HWY 3 Radar Car 2080",
+              "HWY 5 Radar Car 2007",
+              "HWY 5 Radar Car 2013",
+              "HWY 5 Radar Car 1726",
+              "HWY 5 Radar Car 2072",
+              "HWY 5 Radar Car 2088"
+            ]
+          },
+          "example": "HWY 101 - Cross Bronx Expressway"
+        },
+        {
+          "id": "nypd_patrol",
+          "name": "NYPD Patrol / Marked Units",
+          "template": "{precinct}-{sector}{unit_num}",
+          "variables": {
+            "precinct": [
+              "13",
+              "26",
+              "50",
+              "62",
+              "93",
+              "120",
+              "121"
+            ],
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie"
+            ],
+            "unit_num": [
+              "",
+              "-1",
+              "-2",
+              "-3",
+              "-4",
+              "-5",
+              "-6",
+              "-7"
+            ]
+          },
+          "example": "13-Adam-1"
+        },
+        {
+          "id": "nypd_housing",
+          "name": "NYPD Housing",
+          "template": "Housing-{psa}-{sector}",
+          "variables": {
+            "psa": [
+              "1",
+              "4",
+              "6",
+              "7",
+              "8",
+              "9"
+            ],
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie",
+              "Frank",
+              "George"
+            ]
+          },
+          "example": "Housing-1-Adam"
+        },
+        {
+          "id": "nypd_transit_patrol",
+          "name": "NYPD Transit - Patrol",
+          "template": "{district}-Response-{number}",
+          "variables": {
+            "district": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "11"
+            ],
+            "number": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ]
+          },
+          "example": "3-Response-1"
+        },
+        {
+          "id": "nypd_transit_train",
+          "name": "NYPD Transit - Train Patrol",
+          "template": "{district}-{sector}{direction}",
+          "variables": {
+            "district": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "11"
+            ],
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie"
+            ],
+            "direction": [
+              "",
+              " North",
+              " South",
+              " East",
+              " West"
+            ]
+          },
+          "example": "3-Adam North"
+        },
+        {
+          "id": "nypd_transit_fare_evasion",
+          "name": "NYPD Transit - Fare Evasion",
+          "template": "{district}-Fair Evasion-{number}",
+          "variables": {
+            "district": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "11"
+            ],
+            "number": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "11-Fair Evasion-1"
+        },
+        {
+          "id": "nypd_transit_high_visibility",
+          "name": "NYPD Transit - High Visibility",
+          "template": "{district}-{type}-{number}",
+          "variables": {
+            "district": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "11"
+            ],
+            "type": [
+              "High Visibility",
+              "HV"
+            ],
+            "number": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "1-High Visibility-1"
+        },
+        {
+          "id": "nypd_transit_posts",
+          "name": "NYPD Transit - Transit Posts",
+          "template": "{district}-{post}",
+          "variables": {
+            "district": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "11"
+            ],
+            "post": [
+              "11",
+              "12",
+              "13",
+              "21",
+              "22"
+            ]
+          },
+          "example": "3-11"
+        },
+        {
+          "id": "nypd_detectives",
+          "name": "NYPD Precinct Detectives",
+          "template": "{precinct}-Squad",
+          "variables": {
+            "precinct": [
+              "13",
+              "26",
+              "50",
+              "62",
+              "93",
+              "120",
+              "121"
+            ]
+          },
+          "example": "13-Squad"
+        },
+        {
+          "id": "nypd_warrant",
+          "name": "NYPD Warrant Squad",
+          "template": "{borough}-Warrant-Squad",
+          "variables": {
+            "borough": [
+              "Manhattan",
+              "Bronx",
+              "Queens",
+              "Brooklyn-North",
+              "Brooklyn-South",
+              "Staten-Island"
+            ]
+          },
+          "example": "Manhattan-Warrant-Squad"
+        },
+        {
+          "id": "nypd_quality_of_life",
+          "name": "NYPD Quality of Life (Q-Teams)",
+          "template": "{precinct}-{type}-{sector}",
+          "variables": {
+            "precinct": [
+              "13",
+              "26",
+              "50",
+              "62",
+              "93",
+              "120",
+              "121"
+            ],
+            "type": [
+              "Quality",
+              "Q"
+            ],
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie"
+            ]
+          },
+          "example": "13-Quality-Adam"
+        },
+        {
+          "id": "nypd_crt",
+          "name": "NYPD Community Response Team (CRT)",
+          "template": "{area}-CRT",
+          "variables": {
+            "area": [
+              "PBMS",
+              "PBMN",
+              "PBBN",
+              "PBBS",
+              "PBQN",
+              "PBQS",
+              "PBXN",
+              "PBXS",
+              "PBSI",
+              "Citywide",
+              "South Manhattan"
+            ]
+          },
+          "example": "PBMS-CRT"
+        },
+        {
+          "id": "nypd_counter_terrorism",
+          "name": "NYPD Counter Terrorism",
+          "template": "{borough}-CTO-{modifier}",
+          "variables": {
+            "borough": [
+              "PBMN",
+              "PBMS",
+              "PBBN",
+              "PBBS",
+              "PBQN",
+              "PBQS",
+              "PBXN",
+              "PBXS",
+              "PBSI"
+            ],
+            "modifier": [
+              "1",
+              "2",
+              "West",
+              "East",
+              "Post-1",
+              "Post-2"
+            ]
+          },
+          "example": "PBMS-CTO-1"
+        },
+        {
+          "id": "nypd_auxiliary",
+          "name": "NYPD Auxiliary",
+          "template": "{precinct}-Auxiliary",
+          "variables": {
+            "precinct": [
+              "13",
+              "26",
+              "50",
+              "62",
+              "93",
+              "120",
+              "121"
+            ]
+          },
+          "example": "13-Auxiliary"
+        },
+        {
+          "id": "nypd_harbor",
+          "name": "NYPD Harbor Patrol",
+          "template": "Harbor {sector}",
+          "variables": {
+            "sector": [
+              "Adam",
+              "Charlie",
+              "George"
+            ]
+          },
+          "example": "Harbor Adam"
+        },
+        {
+          "id": "nypd_nst",
+          "name": "NYPD Neighborhood Safety Teams (NST)",
+          "template": "{location}-NST",
+          "variables": {
+            "location": [
+              "13",
+              "26",
+              "50",
+              "62",
+              "93",
+              "120",
+              "121",
+              "PSA 1",
+              "PSA 4",
+              "PSA 6"
+            ]
+          },
+          "example": "13-NST"
+        },
+        {
+          "id": "nypd_srg",
+          "name": "NYPD Strategic Response Group (SRG)",
+          "template": "SRG-{squad}-{sector}",
+          "variables": {
+            "squad": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie"
+            ]
+          },
+          "example": "SRG-1-Adam"
+        },
+        {
+          "id": "nypd_esu_trucks",
+          "name": "NYPD ESU Trucks (Heavy)",
+          "template": "ESU-Truck-{number}",
+          "variables": {
+            "number": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11"
+            ]
+          },
+          "example": "ESU-Truck-1"
+        },
+        {
+          "id": "nypd_esu_rep",
+          "name": "NYPD ESU Utility (REP)",
+          "template": "{unit_type} {number}",
+          "variables": {
+            "unit_type": [
+              "Adam",
+              "Boy"
+            ],
+            "number": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ]
+          },
+          "example": "Adam 1"
+        },
+        {
+          "id": "nypd_esu_bearcat",
+          "name": "NYPD ESU Bearcat",
+          "template": "Truck-{number}-Bearcat",
+          "variables": {
+            "number": [
+              "1",
+              "4",
+              "5",
+              "8"
+            ]
+          },
+          "example": "Truck-1-Bearcat"
+        },
+        {
+          "id": "nypd_esu_k9",
+          "name": "NYPD ESU K9",
+          "template": "ESU-K9-{number}",
+          "variables": {
+            "number": [
+              "22",
+              "11",
+              "15",
+              "30"
+            ]
+          },
+          "example": "ESU-K9-22"
+        },
+        {
+          "id": "nypd_k9",
+          "name": "NYPD K9",
+          "template": "K9-{number}",
+          "variables": {
+            "number": [
+              "22",
+              "10",
+              "14",
+              "05"
+            ]
+          },
+          "example": "K9-22"
+        },
+        {
+          "id": "nypd_aviation",
+          "name": "NYPD Aviation",
+          "template": "Aviation-{number}",
+          "variables": {
+            "number": [
+              "17",
+              "18",
+              "19",
+              "20"
+            ]
+          },
+          "example": "Aviation-17"
+        }
+      ]
+    },
+    {
+      "id": "NYSP",
+      "name": "NYSP - New York State Police",
+      "agencyTag": "NYSP",
+      "divisions": [
+        {
+          "id": "nysp_dec",
+          "name": "DEC Police",
+          "template": "7N{number}",
+          "variables": {
+            "number": [
+              "32",
+              "70",
+              "233",
+              "240"
+            ]
+          },
+          "example": "7N32"
+        },
+        {
+          "id": "nysp_parks",
+          "name": "State Parks Police",
+          "template": "8M{number}",
+          "variables": {
+            "number": [
+              "4",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27"
+            ]
+          },
+          "example": "8M4"
+        },
+        {
+          "id": "nysp_zone3",
+          "name": "Zone 3 - General Patrol",
+          "template": "3M{number}",
+          "variables": {
+            "number": [
+              "10",
+              "11",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "33",
+              "34",
+              "35",
+              "36",
+              "37",
+              "38",
+              "39",
+              "40",
+              "41",
+              "42",
+              "43",
+              "44",
+              "45",
+              "46",
+              "47",
+              "48",
+              "49",
+              "50",
+              "51",
+              "52",
+              "53",
+              "54",
+              "55",
+              "56",
+              "57",
+              "58",
+              "59",
+              "60",
+              "61",
+              "62",
+              "63",
+              "64",
+              "65",
+              "66",
+              "67",
+              "68",
+              "69",
+              "70",
+              "71",
+              "72",
+              "73",
+              "74",
+              "75",
+              "76",
+              "77",
+              "78",
+              "79",
+              "80",
+              "81",
+              "82",
+              "83",
+              "84",
+              "85",
+              "86",
+              "87",
+              "88",
+              "89",
+              "90",
+              "91",
+              "92",
+              "93",
+              "94",
+              "95",
+              "96"
+            ]
+          },
+          "example": "3M10"
+        },
+        {
+          "id": "nysp_hq",
+          "name": "Headquarters / Special Units",
+          "template": "M{number}",
+          "variables": {
+            "number": [
+              "60",
+              "61",
+              "62",
+              "63",
+              "64",
+              "65",
+              "66",
+              "67",
+              "68",
+              "69",
+              "70",
+              "71",
+              "72",
+              "73",
+              "74",
+              "75",
+              "76",
+              "77",
+              "78",
+              "79",
+              "80",
+              "81",
+              "82",
+              "83",
+              "84",
+              "85",
+              "86",
+              "87",
+              "88",
+              "89",
+              "90",
+              "91",
+              "92",
+              "93",
+              "94",
+              "95",
+              "96",
+              "97",
+              "98",
+              "99",
+              "100",
+              "101",
+              "102",
+              "103",
+              "104",
+              "105",
+              "106",
+              "107",
+              "108",
+              "109",
+              "110",
+              "111",
+              "112",
+              "113",
+              "114",
+              "115",
+              "116",
+              "117",
+              "118",
+              "119",
+              "120",
+              "121",
+              "122",
+              "123",
+              "124",
+              "125",
+              "126",
+              "127",
+              "128",
+              "129",
+              "130",
+              "131",
+              "132",
+              "133",
+              "134",
+              "135",
+              "136",
+              "137",
+              "138",
+              "139",
+              "140",
+              "141",
+              "142",
+              "143",
+              "144",
+              "145",
+              "146",
+              "147",
+              "148",
+              "149",
+              "150",
+              "151",
+              "152",
+              "153",
+              "154"
+            ]
+          },
+          "example": "M60"
+        },
+        {
+          "id": "nysp_transportation_hub",
+          "name": "Transportation Hub",
+          "template": "1-M-{number}",
+          "variables": {
+            "number": [
+              "10",
+              "20",
+              "99"
+            ]
+          },
+          "example": "1-M-99"
+        },
+        {
+          "id": "nysp_drug_task_force",
+          "name": "Drug Enforcement Task Force",
+          "template": "2-M-{number}",
+          "variables": {
+            "number": [
+              "10",
+              "20",
+              "30"
+            ]
+          },
+          "example": "2-M-20"
+        },
+        {
+          "id": "nysp_bridges_tunnels",
+          "name": "Bridges and Tunnels",
+          "template": "3-M-{number}",
+          "variables": {
+            "number": [
+              "12",
+              "34",
+              "56"
+            ]
+          },
+          "example": "3-M-34"
+        },
+        {
+          "id": "nysp_bci",
+          "name": "BCI - Criminal Investigation",
+          "template": "5-M-{number}",
+          "variables": {
+            "number": [
+              "26",
+              "12",
+              "44"
+            ]
+          },
+          "example": "5-M-26"
+        },
+        {
+          "id": "nysp_cite",
+          "name": "CITE - Unmarked Vehicles",
+          "template": "M-{number}",
+          "variables": {
+            "number": [
+              "200",
+              "201",
+              "202",
+              "203"
+            ]
+          },
+          "example": "M-201"
+        }
+      ]
+    },
+    {
+      "id": "MTAPD",
+      "name": "MTAPD - Metropolitan Transportation Authority Police",
+      "agencyTag": "MTAPD",
+      "divisions": [
+        {
+          "id": "mtapd_d3_patrol",
+          "name": "District 3 - Patrol",
+          "template": "3-{sector}",
+          "variables": {
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie",
+              "Frank",
+              "George",
+              "Henry"
+            ]
+          },
+          "example": "3-Adam"
+        },
+        {
+          "id": "mtapd_d3_to",
+          "name": "District 3 - Transit Ops",
+          "template": "3-TO-{number}",
+          "variables": {
+            "number": [
+              "2",
+              "4",
+              "16"
+            ]
+          },
+          "example": "3-TO-2"
+        },
+        {
+          "id": "mtapd_d3_train",
+          "name": "District 3 - Train Patrol",
+          "template": "3-Train-Patrol-{number}",
+          "variables": {
+            "number": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "3-Train-Patrol-1"
+        },
+        {
+          "id": "mtapd_d3_fare",
+          "name": "District 3 - Fare Evasion",
+          "template": "3-Fair-Evasion-{number}",
+          "variables": {
+            "number": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "3-Fair-Evasion-1"
+        },
+        {
+          "id": "mtapd_d5_patrol",
+          "name": "District 5 - Grand Central Patrol",
+          "template": "5-{sector}",
+          "variables": {
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie",
+              "Frank",
+              "George",
+              "Henry"
+            ]
+          },
+          "example": "5-Adam"
+        },
+        {
+          "id": "mtapd_d5_foot",
+          "name": "District 5 - Foot Post",
+          "template": "5-Foot-Post-{number}",
+          "variables": {
+            "number": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "5-Foot-Post-1"
+        },
+        {
+          "id": "mtapd_d6_patrol",
+          "name": "District 6 - Patrol",
+          "template": "6-{sector}",
+          "variables": {
+            "sector": [
+              "Adam",
+              "David",
+              "Eddie",
+              "Frank",
+              "George",
+              "Henry"
+            ]
+          },
+          "example": "6-Adam"
+        },
+        {
+          "id": "mtapd_d11_patrol",
+          "name": "District 11 - 125th St Patrol",
+          "template": "11-{sector}",
+          "variables": {
+            "sector": [
+              "Adam",
+              "Boy",
+              "Charlie"
+            ]
+          },
+          "example": "11-Adam"
+        },
+        {
+          "id": "mtapd_k9",
+          "name": "MTAPD K-9",
+          "template": "K9-{number}",
+          "variables": {
+            "number": [
+              "24",
+              "12",
+              "18"
+            ]
+          },
+          "example": "K9-24"
+        },
+        {
+          "id": "mtapd_esu",
+          "name": "MTAPD ESU",
+          "template": "ESU-{number}",
+          "variables": {
+            "number": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14"
+            ]
+          },
+          "example": "ESU-1"
+        },
+        {
+          "id": "mtapd_highway",
+          "name": "MTAPD Highway",
+          "template": "HWY-{number}",
+          "variables": {
+            "number": [
+              "22",
+              "10",
+              "15"
+            ]
+          },
+          "example": "HWY-22"
+        },
+        {
+          "id": "mtapd_detectives",
+          "name": "MTAPD Detectives",
+          "template": "{district}-DD-{number}",
+          "variables": {
+            "district": [
+              "3",
+              "5",
+              "6",
+              "9",
+              "11"
+            ],
+            "number": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "11-DD-1"
+        },
+        {
+          "id": "mtapd_special_conditions",
+          "name": "Special Conditions Unit",
+          "template": "Special Conditions - {number}",
+          "variables": {
+            "number": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "Special Conditions - 1"
+        }
+      ]
+    },
+    {
+      "id": "DSNY",
+      "name": "DSNY - Department of Sanitation Police",
+      "agencyTag": "DSNY",
+      "divisions": [
+        {
+          "id": "dsny_patrol",
+          "name": "Sanitation Police Unit",
+          "template": "Sanitation-{unit_num}",
+          "variables": {
+            "unit_num": [
+              "810 (Supervisor)",
+              "840 (Brooklyn)",
+              "850 (Bronx)",
+              "860 (Queens/K9)",
+              "875 (Posting)",
+              "880 (Manhattan)",
+              "895 (A.R.T)",
+              "898 (Mail/Summons)"
+            ]
+          },
+          "example": "Sanitation-861"
+        }
+      ]
+    },
+    {
+      "id": "PEP",
+      "name": "PEP - Parks Enforcement Patrol",
+      "agencyTag": "PEP",
+      "divisions": [
+        {
+          "id": "pep_patrol",
+          "name": "Parks Patrol",
+          "template": "{park}-{number}",
+          "variables": {
+            "park": [
+              "Central Park",
+              "Bronx Park",
+              "Flushing Meadows",
+              "Prospect Park"
+            ],
+            "number": [
+              "06",
+              "23",
+              "12"
+            ]
+          },
+          "example": "Central Park-23"
+        }
+      ]
+    },
+    {
+      "id": "PAPD",
+      "name": "PAPD - Port Authority Police Department",
+      "agencyTag": "PAPD",
+      "divisions": [
+        {
+          "id": "papd_foot",
+          "name": "Foot Patrol",
+          "template": "8-2 {letter}, {station}",
+          "variables": {
+            "letter": [
+              "Alpha",
+              "Bravo",
+              "Charlie"
+            ],
+            "station": [
+              "Kennedy",
+              "Bus Terminal",
+              "Center",
+              "Washington",
+              "Lincoln",
+              "Piers",
+              "Bridges"
+            ]
+          },
+          "example": "8-2 Alpha, Kennedy"
+        },
+        {
+          "id": "papd_patrol_car",
+          "name": "Patrol Car Units",
+          "template": "8-9-{num} {station}",
+          "variables": {
+            "num": [
+              "1",
+              "2",
+              "3"
+            ],
+            "station": [
+              "Kennedy",
+              "Bus Terminal",
+              "Center",
+              "Washington",
+              "Lincoln",
+              "Piers",
+              "Bridges"
+            ]
+          },
+          "example": "8-9-1 Kennedy"
+        },
+        {
+          "id": "papd_esu",
+          "name": "PAPD ESU Vehicle",
+          "template": "8-9-{num} ESU",
+          "variables": {
+            "num": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "8-9-1 ESU"
+        },
+        {
+          "id": "papd_esu_truck",
+          "name": "PAPD ESU Heavy Truck",
+          "template": "Truck-{num}",
+          "variables": {
+            "num": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "example": "Truck-1"
+        }
+      ]
+    },
+    {
+      "id": "NYCSO",
+      "name": "NYCSO - NYC Sheriff's Office",
+      "agencyTag": "NYCSO",
+      "divisions": [
+        {
+          "id": "nycso_patrol",
+          "name": "Patrol / Units",
+          "template": "SO-{number}",
+          "variables": {
+            "number": [
+              "26",
+              "12",
+              "04"
+            ]
+          },
+          "example": "SO-26"
+        },
+        {
+          "id": "nycso_fsu",
+          "name": "Field Support Unit (FSU)",
+          "template": "S-FSU-{number}",
+          "variables": {
+            "number": [
+              "26",
+              "12"
+            ]
+          },
+          "example": "S-FSU-26"
+        }
+      ]
+    },
+    {
+      "id": "FDNY",
+      "name": "FDNY - Fire & EMS",
+      "agencyTag": "FDNY",
+      "divisions": [
+        {
+          "id": "fdny_engine",
+          "name": "Engine Company",
+          "template": "E{num}",
+          "variables": {
+            "num": [
+              "10",
+              "54",
+              "221",
+              "224",
+              "42",
+              "73",
+              "258",
+              "273",
+              "161",
+              "166"
+            ]
+          },
+          "example": "E54"
+        },
+        {
+          "id": "fdny_ladder",
+          "name": "Ladder / Tower Ladder",
+          "template": "L{num}",
+          "variables": {
+            "num": [
+              "1",
+              "4",
+              "102",
+              "157",
+              "47",
+              "58",
+              "121",
+              "125",
+              "79",
+              "84"
+            ]
+          },
+          "example": "L102"
+        },
+        {
+          "id": "fdny_rescue",
+          "name": "Rescue Squad",
+          "template": "Rescue {num}",
+          "variables": {
+            "num": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ]
+          },
+          "example": "Rescue 1"
+        },
+        {
+          "id": "fdny_ems_bls",
+          "name": "FDNY EMS - BLS",
+          "template": "{stn_bus} {phonetic}",
+          "variables": {
+            "stn_bus": [
+              "21",
+              "41",
+              "53"
+            ],
+            "phonetic": [
+              "Adam",
+              "Boy",
+              "Charlie",
+              "David",
+              "Eddie",
+              "HAZTAC"
+            ]
+          },
+          "example": "21 Adam"
+        },
+        {
+          "id": "fdny_ems_als",
+          "name": "FDNY EMS - ALS",
+          "template": "{stn_bus} {phonetic}",
+          "variables": {
+            "stn_bus": [
+              "23",
+              "45"
+            ],
+            "phonetic": [
+              "Sierra",
+              "Tango",
+              "Union",
+              "Victor",
+              "Whiskey",
+              "Xray",
+              "Yankee",
+              "HAZTAC"
+            ]
+          },
+          "example": "45 Victor"
+        }
+      ]
+    }
+  ]
+}

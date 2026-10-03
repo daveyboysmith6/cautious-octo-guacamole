@@ -1,0 +1,126 @@
+/* Signal-light atmosphere, retaining the existing CAD stream. */
+body{background:#080e1a!important}
+body:before{display:block!important;content:'';position:fixed;inset:-15%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 7% 52%,rgba(223,31,63,.25) 0,rgba(166,21,48,.12) 29%,transparent 58%),radial-gradient(ellipse at 91% 40%,rgba(16,97,229,.4) 0,rgba(17,59,144,.21) 31%,transparent 58%);filter:blur(28px);opacity:1;animation:signal-atmosphere 17s ease-in-out infinite alternate!important}
+@keyframes signal-atmosphere{0%{transform:translate3d(-3%,2%,0) scale(1);opacity:.78}50%{opacity:1}100%{transform:translate3d(3%,-3%,0) scale(1.08);opacity:.88}}
+.dispatch-terminal{background:transparent!important}
+
+/* Active-page state is an illuminated underline, never a filled box. */
+.desktop-nav>a,.desktop-nav>a:hover,.desktop-nav>a.active,.desktop-nav>a[aria-current=page]{background:transparent!important;border-color:transparent!important;box-shadow:none!important;border-radius:0!important}
+.desktop-nav>a.active{color:#f3f7ff!important}
+.desktop-nav>a.active:after{box-shadow:0 0 8px #ff5e8060}
+.site-header{overflow:visible!important}
+.site-header:before,.site-header:after{pointer-events:none}
+
+/* The original NYRP mark sits on the film, below the fixed header. */
+.hero-brand-mark{position:absolute;z-index:5;top:128px;right:5.5%;width:clamp(192px,20vw,316px);height:auto;object-fit:contain;filter:drop-shadow(0 8px 24px #001028bb) drop-shadow(0 0 15px #79b6ff24);pointer-events:none;animation:hero-mark-arrive 1.1s ease both}
+@keyframes hero-mark-arrive{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+
+/* Transparent footer: the live decorative dispatch stream remains visible. */
+.footer{background:transparent!important;backdrop-filter:none!important;border-top:0;padding-top:56px!important;isolation:isolate}
+.footer:before{content:'';position:absolute;top:0;left:0;right:0;height:2px;pointer-events:none;background:linear-gradient(90deg,#f12550 0%,#ff5572 32%,#edeaff 49%,#6bacff 67%,#167aff 100%);background-size:160% 100%;box-shadow:-50px 0 18px 2px #ff365d70,50px 0 18px 2px #3387ff72,0 0 4px #cee6ff;animation:footer-signal 6s ease-in-out infinite alternate}
+@keyframes footer-signal{from{background-position:0% 50%;filter:brightness(.85)}to{background-position:100% 50%;filter:brightness(1.3)}}
+.footer-top{align-items:start!important}
+.footer-identity{display:flex;flex-direction:column;gap:13px}
+
+.footer-top .back-top{align-self:center}
+.footer-links,.footer-bottom{border-color:#baccea30}
+.footer-bottom{color:#a5b9d2}
+.footer-links a{color:#c6d9ee}
+.back-top>span{transition:transform .3s,box-shadow .3s,border-color .3s}
+.back-top:hover>span{transform:translateY(-4px);border-color:#ff738b;box-shadow:0 0 18px #ff526a28}
+.feature-image,.gallery-editorial>a{transition:box-shadow .4s,border-color .4s}
+.feature:hover .feature-image,.gallery-editorial>a:hover{border-color:#a6c5f271;box-shadow:0 8px 30px #195bcf20,0 -4px 25px #b7194220}
+.motion-paused:before,.motion-paused .footer:before{animation-play-state:paused!important}
+@media(max-width:700px){
+ .hero-brand-mark{top:106px;right:6%;width:148px;max-height:188px}
+ .footer{padding-top:38px!important}
+ 
+ .footer-top{gap:18px!important}
+ .footer-top .back-top{font-size:11px}
+ body:before{filter:blur(22px);background:radial-gradient(ellipse at 0 45%,#c9234642,transparent 63%),radial-gradient(ellipse at 95% 65%,#1266d754,transparent 63%)}
+}
+@media(prefers-reduced-motion:reduce){body:before,.footer:before,.hero-brand-mark{animation:none!important}.feature-image,.gallery-editorial>a,.back-top>span{transition:none!important}}
+
+/* Shared type system: modern geometric UI; purpose-drawn italic signature. */
+@font-face{font-family:Outfit;src:url('assets/outfit-latin.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'NYRP Signature';src:url('assets/barlow-condensed-italic.woff2') format('woff2');font-weight:600;font-style:italic;font-display:swap}
+:root{--body:Outfit,system-ui,sans-serif;--signal-line:linear-gradient(90deg,#ed375c 0%,#ff728a 32%,#e3eaff 49%,#77b7ff 68%,#2b7cff 100%)}
+body{font-family:var(--body);font-weight:400;-webkit-font-smoothing:antialiased}
+.desktop-nav>a,.header-join,.footer-links a,.text-link,.button{font-family:var(--body);font-weight:500;letter-spacing:.015em}
+.intro-copy,.feature p,.page-title-row p,.rank-brief p{font-weight:400;line-height:1.8}
+.feature h3{font-family:var(--body);font-weight:600;letter-spacing:-.025em}
+.eyebrow,.tiny-label,.info-strip,.hero-utility,.gallery-meta,.image-tag,.department-caption{font-family:var(--body);font-weight:500;letter-spacing:.1em}
+.footer-bottom{font-family:var(--body);font-weight:400;letter-spacing:.055em}
+.footer-links{display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:20px}
+.footer-links nav{gap:20px;margin:0!important;align-items:center}
+.footer-links nav:last-child{justify-content:flex-end}
+.footer-links>.footer-tagline{display:block!important;margin:0!important;text-align:center;white-space:nowrap;font:italic 600 clamp(22px,2.2vw,30px)/1.25 'NYRP Signature',var(--display)!important;letter-spacing:.015em;color:#d9e6fa!important;text-shadow:0 0 18px #6f9ddd25}
+
+/* Glass bands keep the red/blue atmosphere and CAD stream continuous. */
+.marquee,.info-strip{background:rgba(8,15,29,.15)!important;backdrop-filter:none!important}
+.marquee:before{background:linear-gradient(90deg,#07132535,transparent 8%,transparent 92%,#17102435)!important}
+.site-header{background:linear-gradient(110deg,#101d3199,#11234266 56%,#18192d88)!important;backdrop-filter:blur(14px)}
+.departments,.npc-section,.route-bridge{background:rgba(10,19,35,.1)!important}
+.route-cards>a{background:linear-gradient(130deg,#16315730,#20193920)}
+.callsign-workspace{background:linear-gradient(140deg,#16305640,#12162f38);backdrop-filter:none}
+
+/* One continuous red-white-blue illuminated divider language. */
+.has-signal-edge{position:relative;border-top-color:transparent!important;border-bottom-color:transparent!important}
+.hero-utility.has-signal-edge{position:absolute}
+.signal-edge{display:block;position:absolute;left:0;right:0;height:1px;z-index:8;pointer-events:none;background:var(--signal-line);background-size:160% 100%;box-shadow:-35px 0 14px 1px #ff365d48,35px 0 14px 1px #3387ff50,0 0 3px #c6dfff;animation:footer-signal 6s ease-in-out infinite alternate}
+.signal-edge-top{top:0}.signal-edge-bottom{bottom:0}
+.signal-edge:after{content:'';position:absolute;inset:-3px 0;background:inherit;filter:blur(7px);opacity:.48;pointer-events:none}
+.short-line{background:var(--signal-line);box-shadow:0 0 9px #75aaff80}
+.faq-item,.department-tabs,.department-tabs>button,.text-link,.saved-row,.reference-scroll td{border-image:var(--signal-line) 1;box-shadow:0 -5px 14px -13px #6d9eff,0 5px 14px -13px #ff627c}
+.feature-image,.department-panel,.gallery-editorial>a,.route-cards>a,.gallery-photo,.callsign-workspace,.reference-scroll{border-image:var(--signal-line) 1;box-shadow:-4px 0 15px -12px #3b89ff,4px 0 15px -12px #ff476c}
+.hero-note,.command-preview,.callsign-form{border-image:var(--signal-line) 1}
+.motion-paused .signal-edge{animation-play-state:paused!important}
+.department-panel>img{object-position:center}
+#panel-papd>img{object-position:53% 50%}
+@media(max-width:1000px){.footer-links nav{gap:13px}.footer-links a{font-size:12px}.footer-links{gap:15px}.info-strip{letter-spacing:.025em}}
+@media(max-width:760px){.footer-links{grid-template-columns:1fr!important;gap:25px;padding:28px 0}.footer-links nav,.footer-links nav:last-child{justify-content:center}.footer-links>.footer-tagline{font-size:27px!important}.footer-links a{font-size:14px}.footer-bottom{text-align:center}.signal-edge{box-shadow:0 0 9px #77aaff50,0 0 4px #ff577b45}}
+@media(prefers-reduced-motion:reduce){.signal-edge{animation:none!important}}
+
+/* NYRP logo loader: quiet fade, luminous orbit, no red scanning panel. */
+.page-curtain{display:none!important}
+.page-loader{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;background:radial-gradient(ellipse at 30% 48%,#142c4640,transparent 55%),#08101bf5;backdrop-filter:blur(16px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s}
+.page-loader.is-active{opacity:1;visibility:visible;pointer-events:auto}
+.loader-lockup{display:grid;justify-items:center;gap:28px;transform:translateY(8px);transition:transform .25s ease}
+.page-loader.is-active .loader-lockup{transform:translateY(0)}
+.loader-orbit{position:relative;display:grid;place-items:center;width:194px;height:194px}
+.loader-orbit:before{content:'';position:absolute;inset:0;border-radius:50%;border:1px solid #9fc1e527}
+.loader-orbit:after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid transparent;border-top-color:#a9d4ff;border-right-color:#729deb45;filter:drop-shadow(0 0 7px #4c96d780);animation:logo-orbit 1.35s linear infinite}
+.loader-orbit img{width:112px;height:auto;object-fit:contain;filter:drop-shadow(0 0 22px #428cd437)}
+.loader-label{font:500 11px/1.5 var(--body);letter-spacing:.34em;color:#c3d5ed;padding-left:.34em}
+.loader-dots{display:inline-block;width:17px;letter-spacing:.1em;animation:loader-breathe 1.2s ease-in-out infinite}
+@keyframes logo-orbit{to{transform:rotate(360deg)}}
+@keyframes loader-breathe{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.page-loader,.loader-lockup{transition:none}.loader-orbit:after,.loader-dots{animation:none}}
+
+/* Ragged, right-aligned CAD rows: real content length rather than identical grids. */
+.dispatch-terminal{opacity:.28!important}
+.dispatch-stream{right:1.2vw!important;width:65vw!important;padding:0!important;align-items:flex-end!important;gap:3px!important}
+.dispatch-line{display:flex!important;flex:0 0 auto;align-items:center;justify-content:flex-start;gap:11px!important;width:max-content!important;max-width:calc(100% - var(--cad-inset,0px));min-height:17px;margin-right:var(--cad-inset,0px)!important;padding:2px 7px!important;border:0!important;overflow:hidden;position:relative;letter-spacing:.035em!important;transition:opacity .35s ease,transform .35s ease,background-color .6s ease,filter .6s ease!important}
+.dispatch-line span{display:inline!important;flex:0 0 auto;color:rgba(212,230,249,.35)!important}
+.dispatch-line .cad-time{font-size:.9em;color:rgba(176,201,226,.3)!important}
+.dispatch-line .cad-inc{color:rgba(187,215,245,.32)!important}
+.dispatch-line .cad-status{letter-spacing:.065em;color:rgba(180,219,255,.55)!important}
+.dispatch-line .cad-unit{color:rgba(224,238,255,.5)!important}
+.dispatch-line.cad-kind-ack{opacity:.66!important}
+.dispatch-line.cad-kind-incident{border-left:1px solid #91bfff4a!important}
+.dispatch-line:nth-last-child(-n+7) span{color:rgba(217,234,252,.48)!important}
+.dispatch-line.cad-latest span{color:rgba(225,240,255,.68)!important}
+.dispatch-line.cad-latest:after{content:'';display:block;flex:0 0 4px;width:4px;height:9px;background:#b7d9ff;box-shadow:0 0 6px #aacfff66;animation:cad-cursor 1.2s steps(2,end) infinite}
+.dispatch-line.cad-active{background:linear-gradient(90deg,transparent,#abcfff10 30%,#abcfff17 80%,transparent)!important;filter:drop-shadow(0 0 5px #c0dfff35)!important}
+.dispatch-line.cad-active span{color:rgba(230,242,255,.85)!important;text-shadow:0 0 8px #c3e1ff33!important}
+@keyframes cad-cursor{50%{opacity:0}}
+.motion-paused .cad-latest:after{animation:none;opacity:.5}
+@media(max-width:700px){.dispatch-stream{right:1.5vw!important;width:86vw!important;gap:2px!important}.dispatch-line{gap:8px!important;min-height:16px}.dispatch-line .cad-location{max-width:38vw;overflow:hidden;text-overflow:ellipsis}.dispatch-terminal{opacity:.24!important}}
+@media(prefers-reduced-motion:reduce){.dispatch-line{transition:none!important}.cad-latest:after{animation:none!important}}
+
+/* Centered concept credit, with the lower-right column deliberately empty. */
+.footer-bottom{display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:start;gap:20px;padding-bottom:14px;min-height:68px}
+.footer-copyright{grid-column:1;justify-self:start}
+.footer-disclaimer{grid-column:2;justify-self:center;text-align:center;max-width:380px}
+.info-strip>.signal-edge+span:not(.signal-edge):before{content:none}
+@media(max-width:760px){.footer-bottom{grid-template-columns:1fr;gap:12px;padding-bottom:72px}.footer-copyright,.footer-disclaimer{grid-column:1;justify-self:center}.footer-disclaimer{max-width:320px}}
